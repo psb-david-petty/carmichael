@@ -1,15 +1,15 @@
-# `carmichael.py`
+# [`carmichael.py`](https://github.com/psb-david-petty/carmichael/blob/main/src/carmichael.py)
 
-[Python](https://docs.python.org/3/) research into [Carmichael numbers](https://en.wikipedia.org/wiki/Carmichael_number).
+After some research into [Carmichael numbers](https://en.wikipedia.org/wiki/Carmichael_number) and [Python](https://docs.python.org/3/) and nearly 9 CPU hours on an M1 Mac over 17 hours, [`carmichael.py`](https://github.com/psb-david-petty/carmichael/blob/main/src/carmichael.py) calculated the first 864 Carmichael numbers.
 
 ## Research
 
+- *[Teenager Solves Stubborn Riddle About Prime Number Look-Alikes](https://quantamagazine.org/teenager-solves-stubborn-riddle-about-prime-number-look-alikes-20221013/)* &mdash; This article stimulated interest in the topic.
 - [https://primes.utm.edu/glossary/page.php?sort=CarmichaelNumber](https://primes.utm.edu/glossary/page.php?sort=CarmichaelNumber) 'The composite integer *n* is a Carmichael number if <img src="https://latex.codecogs.com/png.image?\dpi{100}a^{n-1}\equiv1\mod%20n" /> for every integer *a* relatively prime to *n*. (This condition is satisfied by all primes because of Fermat's Little Theorem.) The Fermat probable primality test will fail to show a Carmichael number is composite until we run across one of its factors!'
 - [https://oeis.org/A002997](https://oeis.org/A002997) OEIS // [https://oeis.org/A002997/b002997.txt](https://oeis.org/A002997/b002997.txt) first 10000 [Carmichael numbers](https://en.wikipedia.org/wiki/Carmichael_number).
 - [https://stackoverflow.com/a/58325110](https://stackoverflow.com/a/58325110) &mdash; Code for [Eratosthenes Sieve](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes) using [`numpy`](https://numpy.org/). It takes 30+ seconds to calculate primes up to <img src="https://latex.codecogs.com/png.image?\dpi{100}2^{31}-1" />.
 - [https://stackoverflow.com/a/28383393](https://stackoverflow.com/a/28383393) &mdash; Prototype for `factors` used in `carmichael`. After testing [`list`](https://docs.python.org/3/library/stdtypes.html?#list)s versus [`set`](https://docs.python.org/3/library/stdtypes.html?#set)s &mdash; sets are 3&times; faster &mdash; `isprime = lambda n: n in sprimes` works to test for primality &mdash; as long as the `sprimes` set contains all possible primes of interest.
 - Other tests include indexing through all odd divisors as opposed to only prime divisors &mdash; prime divisors are &asymp;100&times; faster.
-- *[Teenager Solves Stubborn Riddle About Prime Number Look-Alikes](https://quantamagazine.org/teenager-solves-stubborn-riddle-about-prime-number-look-alikes-20221013/)*
 
 ## Use
 
@@ -923,3 +923,7 @@ first 32 Carmichaels: 1.3825093331999994s561, 1105, 1729, 2465, 2821, 6601, 8911
 
 Process finished with exit code 0
 ```
+
+<hr>
+
+[&#128279; permalink](https://psb-david-petty.github.io/carmichael) and [&#128297; repository](https://github.com/psb-david-petty/carmichael) for this page.
