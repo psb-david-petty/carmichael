@@ -1,6 +1,6 @@
 # [`carmichael.py`](https://github.com/psb-david-petty/carmichael/blob/main/src/carmichael.py)
 
-After some research into [Carmichael numbers](https://en.wikipedia.org/wiki/Carmichael_number) and [Python](https://docs.python.org/3/) and nearly 9 CPU hours on an M1 Mac over 17 hours, [`carmichael.py`](https://github.com/psb-david-petty/carmichael/blob/main/src/carmichael.py) calculated the first 864 Carmichael numbers.
+After some research into [Carmichael numbers](https://en.wikipedia.org/wiki/Carmichael_number) and [Python](https://docs.python.org/3/) and nearly 9 CPU hours on an M1 Mac at 98% CPU utilization over 17 hours, [`carmichael.py`](https://github.com/psb-david-petty/carmichael/blob/main/src/carmichael.py) calculated the first 864 Carmichael numbers.
 
 ## Research
 
