@@ -29,14 +29,14 @@ maximum = 2 ** 31 // divisor - 1
 start = time.time()
 print(f"Calculating primes up to {maximum}...")
 lprimes = sieve(maximum)
-print(f"{len(lprimes)} primes < {maximum} "
+print(f"{len(lprimes)} primes ≤ {maximum} "
       f"took {int(time.time() - start + 0.5)}s: ...{lprimes[-10:]}")
 sprimes = set(lprimes)
 
 # Calculate test versions of lprimes and sprimes < sqrt(maximum).
 start = time.time()
 tlprimes = sieve(int(maximum ** 0.5 + 1))
-print(f"{len(tlprimes)} primes < {int(maximum ** 0.5 + 1)} "
+print(f"{len(tlprimes)} primes ≤ {int(maximum ** 0.5 + 1)} "
       f"took {int(time.time() - start + 0.5)}s: ...{tlprimes[-10:]}")
 tsprimes = set(tlprimes)
 
