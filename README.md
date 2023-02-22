@@ -13,7 +13,7 @@ After some research into [Carmichael numbers](https://en.wikipedia.org/wiki/Carm
 
 ## Use
 
-The definiton of `carmichael` &mdash; using [Korslet's Criterion](https://en.wikipedia.org/wiki/Carmichael_number#Korselt's_criterion) for prime factors `f` of number `n` is `len(f) > 1 and len(f) == len(set(f)) and all((n - 1) % (p - 1) == 0 for p in f)`:
+The definiton of `carmichael` (using code for [Korslet's Criterion](https://en.wikipedia.org/wiki/Carmichael_number#Korselt's_criterion) of list of prime factors `f` of number `n` is `len(f) > 1 and len(f) == len(set(f)) and all((n - 1) % (p - 1) == 0 for p in f)`) is:
 
 ```python3
 def carmichael(lim=maximum, v=True):
