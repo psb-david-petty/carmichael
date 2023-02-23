@@ -13,7 +13,7 @@ After some research into [Carmichael numbers](https://en.wikipedia.org/wiki/Carm
 
 ## Use
 
-The definiton of `carmichael` (using code for [Korslet's Criterion](https://en.wikipedia.org/wiki/Carmichael_number#Korselt's_criterion) for number `n` with list of prime factors `f` is `len(f) > 1 and len(f) == len(set(f)) and all((n - 1) % (p - 1) == 0 for p in f)`) is:
+The definiton of `carmichael` (using code for [Korslet's Criterion](https://en.wikipedia.org/wiki/Carmichael_number#Korselt's_criterion)) is:
 
 ```python3
 def carmichael(lim=maximum, v=True):
@@ -30,7 +30,11 @@ def carmichael(lim=maximum, v=True):
     n, cns = 3, set()
     while n < lim:
         f = factors(n)
-        if len(f) > 1 and len(f) == len(set(f)) and all((n - 1) % (p - 1) == 0 for p in f):
+        if (
+            len(f) > 1                                  # n is composite
+            and len(f) == len(set(f))                   # n is square-free
+            and all((n - 1) % (p - 1) == 0 for p in f)  # p - 1 | n - 1
+        ):
             cns.add(n)
             if v: print(n, end=', ')
         n += 2

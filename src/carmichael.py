@@ -100,7 +100,11 @@ def carmichael(lim=maximum, v=True):
     n, cns = 3, set()
     while n < lim:
         f = factors(n)
-        if len(f) > 1 and len(f) == len(set(f)) and all((n - 1) % (p - 1) == 0 for p in f):
+        if (
+            len(f) > 1                                  # n is composite
+            and len(f) == len(set(f))                   # n is square-free
+            and all((n - 1) % (p - 1) == 0 for p in f)  # p - 1 | n - 1
+        ):
             cns.add(n)
             if v: print(n, end=', ')
         n += 2
